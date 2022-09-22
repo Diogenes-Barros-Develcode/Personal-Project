@@ -31,7 +31,7 @@ export function Home() {
   useEffect(() => {
     try {
       axios(
-        'http://172.22.19.61:3333/users/b65a503e-49c6-41fd-8d21-b0aca3321b72/favoritethemes',
+        'http://172.22.19.61:3333/users/840954c5-fbda-4486-be36-d900f70b6d0c/favoritethemes',
       ).then(response => {
         setUserTheme(response.data);
       });
@@ -41,17 +41,19 @@ export function Home() {
   }, []);
 
   const renderItem = ({item}: {item: UserThemeProps}) => {
-    return <ThemeCard data={item} onPress={() => handleOpenScreenGame(item)} />;
+    return (
+      <ThemeCard data={item} onPress={() => handleOpenScreenTheme(item)} />
+    );
   };
 
-  function handleOpenScreenGame({id, name}: UserThemeProps) {
+  function handleOpenScreenTheme({id, name}: UserThemeProps) {
     navigation.navigate('ThemePage', {id, name});
   }
 
   useEffect(() => {
     try {
       axios(
-        'http://172.22.19.61:3333/users/b65a503e-49c6-41fd-8d21-b0aca3321b72',
+        'http://172.22.19.61:3333/users/840954c5-fbda-4486-be36-d900f70b6d0c',
       ).then(response => {
         setUserData(response.data);
       });
@@ -69,7 +71,9 @@ export function Home() {
 
         <View style={styles.favoriteView}>
           <Text style={styles.favoriteText}>
-            Você tem {userData?._count?.themes} tema(s) favorito(s)
+            {userData?._count?.themes > 1
+              ? `Você tem ${userData?._count?.themes} temas favoritos`
+              : `Você tem ${userData?._count?.themes} tema favorito`}
           </Text>
         </View>
 
