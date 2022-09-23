@@ -57,17 +57,4 @@ app.get('/users/:id/themeEspecification', async (request, response) => {
     return response.json(themeEspecification)
 })
 
-app.get('/users/:id/imagetocolor', async (request, response) => {
-    const themeEspecificationId = request.params.id
-
-    const imageToColor = await prisma.imageToColor.findMany({
-        where: {
-            themeEspecificationId
-        }
-    })
-
-    return response.json(imageToColor)
-})
-
-
 app.listen(3333)

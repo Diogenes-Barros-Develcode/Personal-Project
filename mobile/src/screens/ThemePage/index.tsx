@@ -17,6 +17,8 @@ interface ThemeEspecificationProps {
   themeImage: string;
   whereLived: string;
   whereLivedImage: string;
+  imageToColor: string;
+  favoriteThemeId: string;
 }
 
 export function ThemePage() {
@@ -45,6 +47,8 @@ export function ThemePage() {
     themeImage,
     whereLived,
     whereLivedImage,
+    imageToColor,
+    favoriteThemeId,
   }: ThemeEspecificationProps) {
     navigation.navigate('EspecificationThemePage', {
       id,
@@ -54,6 +58,8 @@ export function ThemePage() {
       themeImage,
       whereLived,
       whereLivedImage,
+      imageToColor,
+      favoriteThemeId,
     });
   }
 

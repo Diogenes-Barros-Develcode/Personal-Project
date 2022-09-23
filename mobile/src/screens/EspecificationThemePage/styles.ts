@@ -12,8 +12,8 @@ export const styles = StyleSheet.create({
   },
   title: {
     fontFamily: THEME.FONT_FAMILY.BOLD,
-    fontSize: THEME.FONT_SIZE.MD,
-    color: THEME.COLORS.CAPTION_400,
+    fontSize: THEME.FONT_SIZE.LG,
+    color: THEME.COLORS.TEXT,
   },
   image: {
     width: '100%',
@@ -22,6 +22,10 @@ export const styles = StyleSheet.create({
     marginTop: 20,
     marginBottom: 10,
   },
+  wrapperCharacteristics: {
+    width: '100%',
+    height: 100,
+  },
   characteristics: {
     fontFamily: THEME.FONT_FAMILY.REGULAR,
     fontSize: THEME.FONT_SIZE.SM,
@@ -29,6 +33,8 @@ export const styles = StyleSheet.create({
     textAlign: 'justify',
   },
   wrapperTextAndImage: {
+    width: '100%',
+    height: 200,
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: 5,

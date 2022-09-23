@@ -11,10 +11,13 @@ export interface EspecificationParams {
   themeImage: string;
   whereLived: string;
   whereLivedImage: string;
+  imageToColor: string;
+  favoriteThemeId: string;
 }
 
 export interface ImageParams {
   id: string;
+  imageToColor: string;
 }
 
 export declare global {

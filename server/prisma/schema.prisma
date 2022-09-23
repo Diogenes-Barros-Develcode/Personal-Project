@@ -27,21 +27,15 @@ model FavoriteTheme {
 }
 
 model ThemeEspecification {
-  id              String         @id @default(uuid())
+  id              String        @id @default(uuid())
+  favoriteThemeId String
   name            String
   characteristics String
   speciesType     String
   themeImage      String
   whereLived      String
   whereLivedImage String
-  favoriteTheme   FavoriteTheme  @relation(fields: [favoriteThemeId], references: [id])
-  favoriteThemeId String
-  ImageToColor    ImageToColor[]
-}
-
-model ImageToColor {
-  id                    String              @id @default(uuid())
-  image                 String
-  themeEspecification   ThemeEspecification @relation(fields: [themeEspecificationId], references: [id])
-  themeEspecificationId String
+  imageToColorJPG String
+  imageToColor    String
+  favoriteTheme   FavoriteTheme @relation(fields: [favoriteThemeId], references: [id])
 }

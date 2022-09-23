@@ -31,7 +31,7 @@ export function Home() {
   useEffect(() => {
     try {
       axios(
-        'http://172.22.19.61:3333/users/840954c5-fbda-4486-be36-d900f70b6d0c/favoritethemes',
+        'http://172.22.19.61:3333/users/be5ab654-0d45-4b52-b0bc-51e76052e23e/favoritethemes',
       ).then(response => {
         setUserTheme(response.data);
       });
@@ -53,7 +53,7 @@ export function Home() {
   useEffect(() => {
     try {
       axios(
-        'http://172.22.19.61:3333/users/840954c5-fbda-4486-be36-d900f70b6d0c',
+        'http://172.22.19.61:3333/users/be5ab654-0d45-4b52-b0bc-51e76052e23e',
       ).then(response => {
         setUserData(response.data);
       });

@@ -11,7 +11,6 @@ export const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     borderRadius: 8,
     overflow: 'hidden',
-    resizeMode: 'stretch',
   },
   footer: {
     width: '100%',

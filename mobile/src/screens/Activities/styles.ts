@@ -62,4 +62,9 @@ export const styles = StyleSheet.create({
     marginTop: 5,
     textAlign: 'justify',
   },
+  contentList: {
+    marginTop: 80,
+    paddingLeft: 32,
+    paddingRight: 64,
+  },
 });
